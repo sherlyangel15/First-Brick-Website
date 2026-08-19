@@ -16,7 +16,6 @@ export default function IntroAnimation({ onComplete }) {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    // Check if user has reduced motion preference
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     if (prefersReducedMotion) {
@@ -28,11 +27,10 @@ export default function IntroAnimation({ onComplete }) {
       return () => clearTimeout(timer);
     }
 
-    // Always run full 5-stage timeline on every load / refresh (~5.2s total)
-    const timer1 = setTimeout(() => setStage(2), 900);  // Stage 2: Letter by letter white fill
-    const timer2 = setTimeout(() => setStage(3), 2400); // Stage 3: Deep Navy Panel Sweep from left
-    const timer3 = setTimeout(() => setStage(4), 3600); // Stage 4: White Panel Sweep
-    const timer4 = setTimeout(() => setStage(5), 4500); // Stage 5: Final Brand Reveal & Exit
+    const timer1 = setTimeout(() => setStage(2), 900);
+    const timer2 = setTimeout(() => setStage(3), 2400);
+    const timer3 = setTimeout(() => setStage(4), 3600);
+    const timer4 = setTimeout(() => setStage(5), 4500);
     const timer5 = setTimeout(() => {
       setVisible(false);
       if (onComplete) onComplete();
@@ -64,7 +62,6 @@ export default function IntroAnimation({ onComplete }) {
         pointerEvents: stage === 5 ? 'none' : 'all',
       }}
     >
-      {/* Stage 3: Sliding Deep Navy Panel Sweeping from Left */}
       <div
         style={{
           position: 'absolute',
@@ -76,7 +73,6 @@ export default function IntroAnimation({ onComplete }) {
         }}
       />
 
-      {/* Stage 4: Sliding Architectural White Panel Sweeping from Left */}
       <div
         style={{
           position: 'absolute',
@@ -88,7 +84,6 @@ export default function IntroAnimation({ onComplete }) {
         }}
       />
 
-      {/* Centered Brand Title Content */}
       <div
         style={{
           position: 'relative',
@@ -100,7 +95,6 @@ export default function IntroAnimation({ onComplete }) {
         }}
       >
         <div style={{ position: 'relative', display: 'inline-block' }}>
-          {/* Outlined Logo Text (Stage 1) */}
           <h1
             style={{
               fontFamily: "'Outfit', 'Syne', sans-serif",
@@ -118,7 +112,6 @@ export default function IntroAnimation({ onComplete }) {
             FIRST BRICK
           </h1>
 
-          {/* Left-to-Right Progressive Solid White Fill (Stage 2+) */}
           <div
             style={{
               position: 'absolute',
@@ -150,7 +143,6 @@ export default function IntroAnimation({ onComplete }) {
           </div>
         </div>
 
-        {/* Founder Tagline */}
         <p
           style={{
             fontFamily: "'Outfit', sans-serif",

@@ -20,7 +20,6 @@ import CredentialsPage from './pages/CredentialsPage';
 import TermsPage from './pages/TermsPage';
 import ContactPage from './pages/ContactPage';
 
-// Scroll to Top on page change
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -71,7 +70,6 @@ export default function App() {
       {/* Global Studio Footer */}
       <Footer />
 
-      {/* Keyframe animation for smooth page transitions */}
       <style>{`
         @keyframes fadeInPage {
           from {

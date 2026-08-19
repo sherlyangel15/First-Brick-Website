@@ -32,7 +32,6 @@
   --transition-slow: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Base Reset & Reset Defaults */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -54,7 +53,6 @@ body {
   min-height: 100vh;
 }
 
-/* Typography Helpers */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 700;
@@ -83,7 +81,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-text-muted);
 }
 
-/* Watermark / Outlined Architectural Background Text */
 .outlined-text-light {
   color: transparent;
   -webkit-text-stroke: 1.5px rgba(11, 52, 117, 0.18);
@@ -108,7 +105,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 900;
 }
 
-/* Container Utility */
 .container {
   width: 100%;
   max-width: var(--container-max-width);
@@ -122,13 +118,11 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Section Wrapper */
 .section {
   padding: var(--section-padding-y) 0;
   position: relative;
 }
 
-/* Orange Architectural Label / Tag */
 .section-tag {
   display: inline-flex;
   align-items: center;
@@ -145,7 +139,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
 }
 
-/* Architectural Grid Lines Overlay (Subtle structural grid) */
 .architectural-bg-grid {
   background-image: 
     linear-gradient(to right, rgba(11, 52, 117, 0.04) 1px, transparent 1px),
@@ -160,7 +153,6 @@ h1, h2, h3, h4, h5, h6 {
   background-size: 80px 80px;
 }
 
-/* Buttons System */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -214,34 +206,6 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-2px);
 }
 
-.btn-white {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  background-color: var(--color-white);
-  color: var(--color-navy);
-  font-family: var(--font-heading);
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 16px 36px;
-  border: 1px solid var(--color-white);
-  border-radius: 2px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: var(--transition-smooth);
-}
-
-.btn-white:hover {
-  background-color: var(--color-orange);
-  color: var(--color-white);
-  border-color: var(--color-orange);
-  transform: translateY(-2px);
-}
-
-/* Card Styling */
 .editorial-card {
   background: #FFFFFF;
   border: 1px solid var(--color-border);
@@ -256,7 +220,6 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 20px 40px rgba(11, 52, 117, 0.08);
 }
 
-/* Dynamic Image Containers */
 .img-placeholder-wrapper {
   position: relative;
   overflow: hidden;
@@ -264,39 +227,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
-.img-placeholder-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.img-placeholder-wrapper:hover img {
-  transform: scale(1.04);
-}
-
-/* 5-STAGE CINEMATIC INTRO ANIMATION STYLES */
-.intro-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 99999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-/* Text stroke progressive reveal keyframe */
-@keyframes textFillProgressive {
-  0% {
-    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-  }
-  100% {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-}
-
-/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -310,7 +240,6 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--color-orange);
 }
 
-/* Reduced Motion Override */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {
     animation-duration: 0.01ms !important;

@@ -37,7 +37,6 @@ export default function PagePagination() {
     >
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '20px' }}>
         
-        {/* Previous Page Link */}
         {prevPage ? (
           <Link
             to={prevPage.path}
@@ -65,14 +64,12 @@ export default function PagePagination() {
           <div />
         )}
 
-        {/* Current Page Counter */}
         <div style={{ textAlign: 'center', fontFamily: 'var(--font-heading)' }}>
           <span style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)', letterSpacing: '0.2em' }}>
             PAGE 0{currentIndex + 1} OF 12
           </span>
         </div>
 
-        {/* Next Page Link */}
         {nextPage ? (
           <Link
             to={nextPage.path}

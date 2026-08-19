@@ -1,4 +1,5 @@
 import React from 'react';
+import PhilosophySection from '../components/home/PhilosophySection';
 import DifferenceSection from '../components/home/DifferenceSection';
 import PagePagination from '../components/PagePagination';
 
@@ -19,15 +20,16 @@ export default function WhyPage() {
                 marginBottom: '20px',
               }}
             >
-              WHY FIRST <br />
-              <span className="text-orange">BRICK.</span>
+              PLAN BETTER. BUILD BETTER. <br />
+              <span className="text-orange">DELIVER BETTER.</span>
             </h1>
-            <p style={{ fontSize: '1.2rem', color: 'var(--color-text-muted)', maxWidth: '640px' }}>
-              [Why First Brick Header Placeholder] Discover our engineering-led approach, direct site supervision, and transparent cost management.
+            <p style={{ fontSize: '1.2rem', color: 'var(--color-text-muted)', maxWidth: '680px', lineHeight: 1.6 }}>
+              A construction project can become expensive and complicated when decisions are made without proper planning. At First Brick, we focus on 5 fundamental principles and engineering discipline.
             </p>
           </div>
         </section>
 
+        <PhilosophySection />
         <DifferenceSection />
       </div>
 

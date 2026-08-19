@@ -19,11 +19,11 @@ export default function QualityPage() {
                 marginBottom: '20px',
               }}
             >
-              QUALITY & <br />
+              QUALITY & CONSTRUCTION <br />
               <span className="text-orange">APPROACH.</span>
             </h1>
-            <p style={{ fontSize: '1.2rem', color: 'var(--color-text-muted)', maxWidth: '640px' }}>
-              [Quality Page Header Placeholder] Unyielding structural standards, IS code material testing, and rigorous site inspection protocols.
+            <p style={{ fontSize: '1.2rem', color: 'var(--color-text-muted)', maxWidth: '680px', lineHeight: 1.6 }}>
+              Quality begins with appropriate materials, correct construction practices, proper supervision, workmanship, measurements, and quality checks throughout every phase.
             </p>
           </div>
         </section>

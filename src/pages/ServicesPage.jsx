@@ -1,6 +1,7 @@
 import React from 'react';
 import ServicesSection from '../components/home/ServicesSection';
 import PagePagination from '../components/PagePagination';
+import { Building, Compass, ShieldCheck } from 'lucide-react';
 
 export default function ServicesPage() {
   return (
@@ -8,7 +9,7 @@ export default function ServicesPage() {
       <div>
         <section className="section architectural-bg-grid" style={{ backgroundColor: 'var(--color-bg)', paddingBottom: '60px' }}>
           <div className="container">
-            <span className="section-tag">FULL CAPABILITIES</span>
+            <span className="section-tag">SERVICES & OFFERINGS</span>
             <h1
               style={{
                 fontFamily: 'var(--font-heading)',
@@ -23,7 +24,7 @@ export default function ServicesPage() {
               <span className="text-orange">SERVICES.</span>
             </h1>
             <p style={{ fontSize: '1.2rem', color: 'var(--color-text-muted)', maxWidth: '640px' }}>
-              [Services Header Placeholder] Comprehensive civil construction, structural engineering consultancy, and turnkey project management solutions.
+              First Brick offers end-to-end civil construction, pre-construction structural engineering, quantity surveying, and turnkey site project management.
             </p>
           </div>
         </section>

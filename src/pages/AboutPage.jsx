@@ -1,12 +1,20 @@
 import React from 'react';
 import AboutSection from '../components/home/AboutSection';
 import PagePagination from '../components/PagePagination';
-import { Building, Shield, Award } from 'lucide-react';
+import { UserCheck, Layers, FileText, CheckCircle2 } from 'lucide-react';
 
 export default function AboutPage() {
+  const whoWeAreCards = [
+    { title: 'Site Execution', desc: 'Direct, hands-on site supervision ensuring structural blueprints are followed to the millimeter.' },
+    { title: 'Estimation & BOQ', desc: 'Pre-construction Bill of Quantities preventing budget overruns and unexpected cost inflations.' },
+    { title: 'Quantity Surveying', desc: 'Rigorous calculation of cement, steel, masonry, and finishing materials prior to procurement.' },
+    { title: 'Billing & Coordination', desc: 'Transparent stage-wise billing, legal documentation, and seamless site workforce coordination.' },
+  ];
+
   return (
     <div style={{ paddingTop: '140px', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
       <div>
+        {/* Page Header */}
         <section className="section architectural-bg-grid" style={{ backgroundColor: 'var(--color-bg)', paddingBottom: '60px' }}>
           <div className="container">
             <span className="section-tag">ABOUT FIRST BRICK</span>
@@ -20,45 +28,62 @@ export default function AboutPage() {
                 marginBottom: '20px',
               }}
             >
-              THE STUDIO & <br />
-              <span className="text-orange">PHILOSOPHY.</span>
+              BUILT FROM THE FIRST IDEA <br />
+              <span className="text-orange">TO THE FINAL BRICK.</span>
             </h1>
-            <p style={{ fontSize: '1.2rem', color: 'var(--color-text-muted)', maxWidth: '640px' }}>
-              [About Page Header Placeholder] FIRST BRICK is a premium civil engineering and construction studio dedicated to structural excellence, material purity, and client transparency in Salem, Tamil Nadu.
+            <p style={{ fontSize: '1.2rem', color: 'var(--color-text-muted)', maxWidth: '680px', lineHeight: 1.6 }}>
+              First Brick by Aravinth Jaganathan is a civil construction and engineering venture based in Salem, Tamil Nadu, focused on delivering end-to-end construction solutions for residential and selected commercial projects.
             </p>
           </div>
         </section>
 
         <AboutSection />
 
+        {/* Section: WHO WE ARE */}
         <section className="section" style={{ backgroundColor: 'var(--color-white)' }}>
           <div className="container">
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '60px' }}>
-              <div>
-                <h2 style={{ fontSize: '2rem', fontFamily: 'var(--font-heading)', color: 'var(--color-navy)', marginBottom: '20px' }}>
-                  Engineering Precision Meets Architectural Vision
-                </h2>
-                <p style={{ fontSize: '1.05rem', color: 'var(--color-text-muted)', lineHeight: 1.7, marginBottom: '20px' }}>
-                  [About Content Placeholder] Founded by Aravinth Jaganathan, First Brick was established to bring high-end engineering rigour and modern management practices to civil construction. We believe every building is an enduring legacy.
-                </p>
-                <p style={{ fontSize: '1.05rem', color: 'var(--color-text-muted)', lineHeight: 1.7 }}>
-                  Our studio manages all facets of residential, commercial, and structural projects — ensuring every phase from soil test to handover adheres strictly to IS codes.
-                </p>
-              </div>
+            <div style={{ maxWidth: '800px', marginBottom: '48px' }}>
+              <span className="section-tag">WHO WE ARE</span>
+              <h2
+                style={{
+                  fontFamily: 'var(--font-heading)',
+                  fontSize: 'clamp(2.2rem, 3.5vw, 3.5rem)',
+                  fontWeight: 800,
+                  color: 'var(--color-navy)',
+                  marginTop: '12px',
+                  marginBottom: '24px',
+                }}
+              >
+                A PROFESSIONAL, TRANSPARENT & <span className="text-orange">ENGINEERING-ORIENTED</span> APPROACH.
+              </h2>
+              
+              <p style={{ fontSize: '1.05rem', color: 'var(--color-text-primary)', lineHeight: 1.75, marginBottom: '20px' }}>
+                First Brick was established with the objective of bringing a more professional, transparent and engineering-oriented approach to building construction.
+              </p>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
-                <div className="editorial-card">
-                  <Building size={32} color="#FF5A14" />
-                  <h3 style={{ fontSize: '1.1rem', fontFamily: 'var(--font-heading)', color: 'var(--color-navy)', margin: '12px 0 6px 0' }}>Bespoke Builds</h3>
-                  <p style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)' }}>Tailored civil construction for luxury homes and commercial spaces.</p>
-                </div>
-                <div className="editorial-card">
-                  <Shield size={32} color="#FF5A14" />
-                  <h3 style={{ fontSize: '1.1rem', fontFamily: 'var(--font-heading)', color: 'var(--color-navy)', margin: '12px 0 6px 0' }}>IS Compliance</h3>
-                  <p style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)' }}>Certified cube testing, steel tensile analysis, and site safety.</p>
-                </div>
-              </div>
+              <p style={{ fontSize: '1.05rem', color: 'var(--color-text-muted)', lineHeight: 1.75, marginBottom: '20px' }}>
+                Led by Aravinth Jaganathan, a Civil Engineering professional with practical experience in site execution, estimation, quantity surveying, billing and project coordination, First Brick combines technical knowledge with hands-on construction experience.
+              </p>
+
+              <p style={{ fontSize: '1.05rem', color: 'var(--color-text-muted)', lineHeight: 1.75 }}>
+                Rather than treating construction as simply a collection of individual works, we approach every project as a complete system where planning, cost, materials, manpower, quality and time need to work together. Our objective is to make the construction journey more organised and understandable for the client.
+              </p>
             </div>
+
+            {/* Who We Are Capabilities Grid */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '24px' }}>
+              {whoWeAreCards.map((item) => (
+                <div key={item.title} className="editorial-card">
+                  <h3 style={{ fontSize: '1.25rem', fontFamily: 'var(--font-heading)', color: 'var(--color-navy)', marginBottom: '12px' }}>
+                    {item.title}
+                  </h3>
+                  <p style={{ fontSize: '0.92rem', color: 'var(--color-text-muted)', lineHeight: 1.6 }}>
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+
           </div>
         </section>
       </div>

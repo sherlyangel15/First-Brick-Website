@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Send, CheckCircle2 } from 'lucide-react';
+import { MapPin, Phone, Mail, Globe, Send, CheckCircle2 } from 'lucide-react';
 import PagePagination from '../components/PagePagination';
 
 export default function ContactPage() {
@@ -13,6 +13,7 @@ export default function ContactPage() {
   return (
     <div style={{ paddingTop: '140px', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
       <div>
+        {/* Header */}
         <section className="section architectural-bg-grid" style={{ backgroundColor: 'var(--color-bg)', paddingBottom: '60px' }}>
           <div className="container">
             <span className="section-tag">BACK COVER // CONTACT STUDIO</span>
@@ -23,14 +24,17 @@ export default function ContactPage() {
                 fontWeight: 900,
                 color: 'var(--color-navy)',
                 lineHeight: 1.05,
-                marginBottom: '20px',
+                marginBottom: '16px',
               }}
             >
-              START A <br />
-              <span className="text-orange">PROJECT.</span>
+              HAVE A PROJECT <br />
+              <span className="text-orange">IN MIND?</span>
             </h1>
-            <p style={{ fontSize: '1.2rem', color: 'var(--color-text-muted)', maxWidth: '640px' }}>
-              [Contact Header Placeholder] Connect with founder & lead engineer Aravinth Jaganathan to discuss your civil construction, villa, or commercial engineering project.
+            <p style={{ fontSize: '1.25rem', fontFamily: 'var(--font-heading)', color: 'var(--color-navy)', fontWeight: 700, marginBottom: '12px' }}>
+              LET’S BUILD IT FROM THE FIRST BRICK.
+            </p>
+            <p style={{ fontSize: '1.1rem', color: 'var(--color-text-muted)', maxWidth: '640px', lineHeight: 1.6 }}>
+              Tell us about your project, requirements and expectations. We’ll help you understand the next steps.
             </p>
           </div>
         </section>
@@ -39,9 +43,10 @@ export default function ContactPage() {
           <div className="container">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '60px' }}>
               
+              {/* Studio Details */}
               <div>
                 <h2 style={{ fontSize: '2rem', fontFamily: 'var(--font-heading)', color: 'var(--color-navy)', marginBottom: '24px' }}>
-                  Studio Location & Details
+                  Studio Information
                 </h2>
                 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', fontSize: '1rem', color: 'var(--color-text-primary)' }}>
@@ -50,7 +55,7 @@ export default function ContactPage() {
                       <MapPin size={20} color="#FF5A14" />
                     </div>
                     <div>
-                      <h3 style={{ fontSize: '1.1rem', fontFamily: 'var(--font-heading)', color: 'var(--color-navy)' }}>Headquarters</h3>
+                      <h3 style={{ fontSize: '1.1rem', fontFamily: 'var(--font-heading)', color: 'var(--color-navy)' }}>Location</h3>
                       <p style={{ color: 'var(--color-text-muted)', marginTop: '4px' }}>
                         FIRST BRICK Studio<br />
                         Salem, Tamil Nadu, India
@@ -63,9 +68,9 @@ export default function ContactPage() {
                       <Phone size={20} color="#FF5A14" />
                     </div>
                     <div>
-                      <h3 style={{ fontSize: '1.1rem', fontFamily: 'var(--font-heading)', color: 'var(--color-navy)' }}>Direct Phone</h3>
-                      <p style={{ color: 'var(--color-text-muted)', marginTop: '4px' }}>
-                        +91 (0) 98765 43210 [Placeholder]
+                      <h3 style={{ fontSize: '1.1rem', fontFamily: 'var(--font-heading)', color: 'var(--color-navy)' }}>Phone</h3>
+                      <p style={{ color: 'var(--color-orange)', fontWeight: 600, marginTop: '4px' }}>
+                        To be added
                       </p>
                     </div>
                   </div>
@@ -75,23 +80,36 @@ export default function ContactPage() {
                       <Mail size={20} color="#FF5A14" />
                     </div>
                     <div>
-                      <h3 style={{ fontSize: '1.1rem', fontFamily: 'var(--font-heading)', color: 'var(--color-navy)' }}>Email Inquiry</h3>
-                      <p style={{ color: 'var(--color-text-muted)', marginTop: '4px' }}>
-                        contact@firstbrick.in [Placeholder]
+                      <h3 style={{ fontSize: '1.1rem', fontFamily: 'var(--font-heading)', color: 'var(--color-navy)' }}>Email</h3>
+                      <p style={{ color: 'var(--color-orange)', fontWeight: 600, marginTop: '4px' }}>
+                        To be added
+                      </p>
+                    </div>
+                  </div>
+
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
+                    <div style={{ width: '40px', height: '40px', backgroundColor: 'rgba(255, 90, 20, 0.12)', border: '1px solid var(--color-orange)', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '2px', flexShrink: 0 }}>
+                      <Globe size={20} color="#FF5A14" />
+                    </div>
+                    <div>
+                      <h3 style={{ fontSize: '1.1rem', fontFamily: 'var(--font-heading)', color: 'var(--color-navy)' }}>Website</h3>
+                      <p style={{ color: 'var(--color-orange)', fontWeight: 600, marginTop: '4px' }}>
+                        To be added
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div style={{ marginTop: '40px', height: '220px', border: '1px solid var(--color-navy)', backgroundColor: '#0B3475', position: 'relative' }}>
-                  <svg width="100%" height="100%" viewBox="0 0 400 220" style={{ display: 'block' }}>
-                    <rect width="400" height="220" fill="#0B3475" />
+                {/* Architectural Map Box */}
+                <div style={{ marginTop: '40px', height: '200px', border: '1px solid var(--color-navy)', backgroundColor: '#0B3475', position: 'relative' }}>
+                  <svg width="100%" height="100%" viewBox="0 0 400 200" style={{ display: 'block' }}>
+                    <rect width="400" height="200" fill="#0B3475" />
                     <g stroke="#FF5A14" strokeWidth="1" strokeDasharray="4 4" fill="none">
-                      <line x1="0" y1="110" x2="400" y2="110" />
-                      <line x1="200" y1="0" x2="200" y2="220" />
-                      <circle cx="200" cy="110" r="40" strokeWidth="2" />
+                      <line x1="0" y1="100" x2="400" y2="100" />
+                      <line x1="200" y1="0" x2="200" y2="200" />
+                      <circle cx="200" cy="100" r="35" strokeWidth="2" />
                     </g>
-                    <text x="200" y="115" textAnchor="middle" fill="#FFFFFF" fontSize="14" fontFamily="Outfit" fontWeight="800">
+                    <text x="200" y="105" textAnchor="middle" fill="#FFFFFF" fontSize="14" fontFamily="Outfit" fontWeight="800">
                       SALEM, TAMIL NADU
                     </text>
                   </svg>
@@ -99,12 +117,13 @@ export default function ContactPage() {
 
               </div>
 
+              {/* Contact Form */}
               <div className="editorial-card" style={{ backgroundColor: 'var(--color-bg)' }}>
                 <h2 style={{ fontSize: '1.8rem', fontFamily: 'var(--font-heading)', color: 'var(--color-navy)', marginBottom: '8px' }}>
-                  Project Consultation Form
+                  Start a Conversation
                 </h2>
                 <p style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)', marginBottom: '24px' }}>
-                  Fill out the form below to receive a call back from lead engineer Aravinth Jaganathan.
+                  Tell us about your project requirements to receive a call back from founder & lead engineer Aravinth Jaganathan.
                 </p>
 
                 {submitted ? (
@@ -114,7 +133,7 @@ export default function ContactPage() {
                       Inquiry Received
                     </h3>
                     <p style={{ fontSize: '0.92rem', color: 'var(--color-text-muted)', marginTop: '8px' }}>
-                      Thank you. Aravinth Jaganathan will reach out within 24 hours.
+                      Thank you. Aravinth Jaganathan will reach out to discuss your project.
                     </p>
                   </div>
                 ) : (
@@ -126,7 +145,7 @@ export default function ContactPage() {
                       <input
                         type="text"
                         required
-                        placeholder="e.g. Ramesh Kumar"
+                        placeholder="Enter your name"
                         style={{ width: '100%', padding: '14px', border: '1px solid var(--color-border)', borderRadius: '2px', fontFamily: 'var(--font-body)', fontSize: '0.95rem' }}
                       />
                     </div>
@@ -158,33 +177,33 @@ export default function ContactPage() {
 
                     <div>
                       <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 700, color: 'var(--color-navy)', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '6px' }}>
-                        Project Category
+                        Project Type
                       </label>
                       <select
                         style={{ width: '100%', padding: '14px', border: '1px solid var(--color-border)', borderRadius: '2px', fontFamily: 'var(--font-body)', fontSize: '0.95rem', backgroundColor: '#FFF' }}
                       >
-                        <option>Individual House / Residence</option>
-                        <option>Luxury Villa</option>
-                        <option>Commercial Building</option>
-                        <option>Renovation & Structural Retrofit</option>
-                        <option>Engineering Consultancy</option>
-                        <option>Quantity Surveying & BOQ</option>
+                        <option>Residential Construction / Individual House</option>
+                        <option>Luxury Villa Project</option>
+                        <option>Commercial Construction</option>
+                        <option>Building Renovation</option>
+                        <option>Engineering Consultancy & BOQ</option>
+                        <option>Quantity Surveying & Estimation</option>
                       </select>
                     </div>
 
                     <div>
                       <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 700, color: 'var(--color-navy)', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '6px' }}>
-                        Project Details / Location / Requirements
+                        Project Details / Site Location
                       </label>
                       <textarea
                         rows={4}
-                        placeholder="Share built-up area details, site location, timeline..."
+                        placeholder="Tell us about your requirements, site dimensions, timeline..."
                         style={{ width: '100%', padding: '14px', border: '1px solid var(--color-border)', borderRadius: '2px', fontFamily: 'var(--font-body)', fontSize: '0.95rem' }}
                       />
                     </div>
 
                     <button type="submit" className="btn-primary" style={{ width: '100%', marginTop: '8px' }}>
-                      SUBMIT INQUIRY
+                      START A CONVERSATION
                       <Send size={18} />
                     </button>
                   </form>

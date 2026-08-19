@@ -66,7 +66,6 @@ export default function Navbar() {
       >
         <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           
-          {/* Brand Title */}
           <Link to="/" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', flexDirection: 'column' }}>
             <span
               style={{
@@ -95,7 +94,6 @@ export default function Navbar() {
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
           <nav style={{ display: 'flex', alignItems: 'center', gap: '28px' }} className="desktop-nav-only">
             {desktopPrimaryNav.map((link) => {
               const isActive = location.pathname === link.path;
@@ -134,7 +132,6 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Right Action & Mobile Drawer Button */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
             <Link
               to="/contact"
@@ -168,7 +165,6 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Full-Screen Drawer Menu showing all 12 pages */}
       <div
         style={{
           position: 'fixed',

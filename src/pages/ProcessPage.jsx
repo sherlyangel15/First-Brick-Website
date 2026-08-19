@@ -23,7 +23,7 @@ export default function ProcessPage() {
               <span className="text-orange">EXECUTE.</span>
             </h1>
             <p style={{ fontSize: '1.2rem', color: 'var(--color-text-muted)', maxWidth: '640px' }}>
-              [Process Header Placeholder] Our systematic 8-stage civil engineering roadmap guarantees structural integrity, zero budget inflation, and timely handover.
+              Our systematic 8-stage civil engineering roadmap guarantees structural integrity, zero budget inflation, and timely handover.
             </p>
           </div>
         </section>

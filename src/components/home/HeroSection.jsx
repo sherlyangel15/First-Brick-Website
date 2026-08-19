@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, ChevronDown, Compass } from 'lucide-react';
+import { ArrowUpRight, ChevronDown, ShieldCheck } from 'lucide-react';
 
 export default function HeroSection() {
   return (
@@ -18,7 +18,7 @@ export default function HeroSection() {
       }}
       className="architectural-bg-grid"
     >
-      {/* Background Watermark Outlined Text inspired by reference design */}
+      {/* Background Watermark Outlined Text */}
       <div
         style={{
           position: 'absolute',
@@ -40,10 +40,10 @@ export default function HeroSection() {
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         
         {/* Top Tag & Founder Line */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
-          <span className="section-tag">CIVIL ENGINEERING & CONSTRUCTION</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px', flexWrap: 'wrap' }}>
+          <span className="section-tag">CIVIL CONSTRUCTION • ENGINEERING • PROJECT MANAGEMENT</span>
           <span style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)', fontFamily: 'var(--font-heading)', fontWeight: 600 }}>
-            FOUNDED BY ARAVINTH JAGANATHAN
+            SALEM, TAMIL NADU
           </span>
         </div>
 
@@ -62,31 +62,31 @@ export default function HeroSection() {
               style={{
                 fontFamily: 'var(--font-heading)',
                 fontSize: 'clamp(2.8rem, 5vw, 5.2rem)',
-                fontWeight: 800,
+                fontWeight: 900,
                 color: 'var(--color-navy)',
                 lineHeight: 1.05,
                 letterSpacing: '-0.03em',
                 marginBottom: '28px',
               }}
             >
-              PREMIUM CIVIL <br />
+              BUILT FROM THE <br />
               <span className="outlined-text-orange" style={{ textTransform: 'uppercase' }}>
-                CONSTRUCTION
+                FIRST IDEA
               </span> <br />
-              & ENGINEERING.
+              TO THE FINAL BRICK.
             </h1>
 
             <p
               style={{
                 fontSize: 'clamp(1.05rem, 1.5vw, 1.25rem)',
                 color: 'var(--color-text-muted)',
-                lineHeight: 1.6,
-                maxWidth: '540px',
+                lineHeight: 1.65,
+                maxWidth: '560px',
                 marginBottom: '40px',
                 fontWeight: 400,
               }}
             >
-              [Hero Description Placeholder] Architectural precision, structural integrity, and transparent execution from the first brick to completion. Delivering high-end residential, commercial, and structural engineering solutions in Salem, Tamil Nadu.
+              First Brick by Aravinth Jaganathan is a civil construction and engineering venture based in Salem, Tamil Nadu, focused on delivering end-to-end construction solutions for residential and selected commercial projects.
             </p>
 
             {/* CTAs */}
@@ -95,13 +95,13 @@ export default function HeroSection() {
                 START A PROJECT
                 <ArrowUpRight size={20} />
               </Link>
-              <Link to="/projects" className="btn-secondary">
-                EXPLORE PROJECTS
+              <Link to="/process" className="btn-secondary">
+                EXPLORE OUR APPROACH
               </Link>
             </div>
           </div>
 
-          {/* Hero Visual Imagery Box */}
+          {/* Hero Visual Architectural Graphic */}
           <div style={{ position: 'relative' }}>
             <div
               className="img-placeholder-wrapper"
@@ -112,7 +112,6 @@ export default function HeroSection() {
                 boxShadow: '24px 24px 0px rgba(11, 52, 117, 0.06)',
               }}
             >
-              {/* High Quality Architectural SVG Imagery Graphic */}
               <svg
                 width="100%"
                 height="100%"
@@ -133,9 +132,8 @@ export default function HeroSection() {
                 <rect width="800" height="600" fill="url(#heroGrad)" />
                 <rect width="800" height="600" fill="url(#gridPattern)" />
 
-                {/* Crane & Architectural Outline Art */}
-                <g stroke="#FF5A14" strokeWidth="2" fill="none" opacity="0.8">
-                  {/* Tower Crane */}
+                {/* Crane & Architectural Structure Art */}
+                <g stroke="#FF5A14" strokeWidth="2" fill="none" opacity="0.85">
                   <line x1="560" y1="600" x2="560" y2="120" strokeWidth="4" />
                   <line x1="560" y1="140" x2="760" y2="140" strokeWidth="3" />
                   <line x1="560" y1="140" x2="420" y2="140" strokeWidth="3" />
@@ -143,24 +141,18 @@ export default function HeroSection() {
                   <line x1="720" y1="140" x2="720" y2="260" strokeDasharray="4 4" stroke="#FFF" strokeWidth="1.5" />
                   <rect x="710" y="260" width="20" height="20" fill="#FF5A14" />
                   
-                  {/* Building Frame */}
                   <rect x="150" y="200" width="320" height="400" stroke="#FFFFFF" strokeWidth="2" strokeDasharray="6 6" />
                   <line x1="150" y1="280" x2="470" y2="280" stroke="#FFFFFF" opacity="0.4" />
                   <line x1="150" y1="360" x2="470" y2="360" stroke="#FFFFFF" opacity="0.4" />
                   <line x1="150" y1="440" x2="470" y2="440" stroke="#FFFFFF" opacity="0.4" />
                   <line x1="150" y1="520" x2="470" y2="520" stroke="#FFFFFF" opacity="0.4" />
-                  
-                  <line x1="230" y1="200" x2="230" y2="600" stroke="#FFFFFF" opacity="0.4" />
-                  <line x1="310" y1="200" x2="310" y2="600" stroke="#FFFFFF" opacity="0.4" />
-                  <line x1="390" y1="200" x2="390" y2="600" stroke="#FFFFFF" opacity="0.4" />
                 </g>
 
-                {/* Text overlay on hero graphic */}
-                <text x="180" y="250" fill="#FFFFFF" fontSize="24" fontFamily="Outfit" fontWeight="800" letterSpacing="4">
-                  STRUCTURAL ELEVATION
+                <text x="180" y="250" fill="#FFFFFF" fontSize="22" fontFamily="Outfit" fontWeight="800" letterSpacing="3">
+                  CIVIL ENGINEERING STUDIO
                 </text>
-                <text x="180" y="280" fill="#FF5A14" fontSize="14" fontFamily="Inter" fontWeight="600" letterSpacing="2">
-                  SITE SPECIFICATION // SALEM, TN
+                <text x="180" y="280" fill="#FF5A14" fontSize="13" fontFamily="Inter" fontWeight="600" letterSpacing="2">
+                  SALEM, TAMIL NADU // ARAVINTH JAGANATHAN
                 </text>
               </svg>
 
@@ -177,7 +169,7 @@ export default function HeroSection() {
                 }}
               >
                 <p style={{ fontSize: '0.75rem', color: 'var(--color-orange)', letterSpacing: '0.15em', fontWeight: 700, textTransform: 'uppercase' }}>
-                  STUDIO COMMITMENT
+                  OUR PHILOSOPHY
                 </p>
                 <p style={{ fontSize: '1rem', fontFamily: 'var(--font-heading)', fontWeight: 700, marginTop: '2px' }}>
                   “Not only first brick, last brick also.”
@@ -192,7 +184,7 @@ export default function HeroSection() {
         <div style={{ marginTop: '80px', display: 'flex', alignItems: 'center', gap: '16px', color: 'var(--color-navy)' }}>
           <div style={{ width: '40px', height: '1px', backgroundColor: 'var(--color-navy)' }} />
           <span style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', fontFamily: 'var(--font-heading)' }}>
-            SCROLL TO DISCOVER
+            EXPLORE STUDIO DIRECTORY
           </span>
           <ChevronDown size={18} color="#FF5A14" />
         </div>

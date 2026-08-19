@@ -1,24 +1,127 @@
-import React from 'react';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowRight, CheckCircle2, ChevronRight } from 'lucide-react';
 
 export default function ProcessSection() {
   const steps = [
-    { num: '01', title: 'Concept', desc: '[Concept Stage] Initial architectural brief, site assessment, and client vision alignment.' },
-    { num: '02', title: 'Planning', desc: '[Planning Stage] 2D/3D structural drafting, soil testing, and local authority compliance.' },
-    { num: '03', title: 'Estimation', desc: '[Estimation Stage] Transparent Bill of Quantities (BOQ), material specs, and budget lock.' },
-    { num: '04', title: 'Procurement', desc: '[Procurement Stage] Sourcing premium grade steel, cement, bricks, and structural materials.' },
-    { num: '05', title: 'Construction', desc: '[Construction Stage] Structural excavation, footing, RCC framing, and masonry work.' },
-    { num: '06', title: 'Quality Control', desc: '[Quality Control] Multi-stage cube testing, plumbing pressure tests, and site audits.' },
-    { num: '07', title: 'Finishing', desc: '[Finishing Stage] Electrical fitting, plastering, custom flooring, painting, and joinery.' },
-    { num: '08', title: 'Handover', desc: '[Completion & Handover] Final walkthrough, structural certificate, key handover.' },
+    {
+      num: '01',
+      title: 'CONCEPT',
+      intro: 'We begin by understanding the client’s vision and functional goals.',
+      items: [
+        'Client requirements',
+        'Lifestyle requirements',
+        'Site dimensions',
+        'Budget expectations',
+        'Project type',
+        'Functional requirements',
+        'Future requirements',
+      ],
+    },
+    {
+      num: '02',
+      title: 'PLANNING',
+      intro: 'Coordinating project requirements with drawings and technical info.',
+      items: [
+        'Site planning',
+        'Space planning',
+        'Construction planning',
+        'Quantity assessment',
+        'Material planning',
+        'Preliminary costing',
+        'Project scheduling',
+      ],
+    },
+    {
+      num: '03',
+      title: 'ESTIMATION',
+      intro: 'Establishing expected requirements before construction begins to avoid unexpected variations.',
+      items: [
+        'BOQ preparation',
+        'Material quantities',
+        'Labour requirements',
+        'Rate analysis',
+        'Cost estimation',
+        'Scope definition',
+        'Payment stages',
+      ],
+    },
+    {
+      num: '04',
+      title: 'PROCUREMENT',
+      intro: 'Coordinating timely availability of specified building materials considering quality and budget.',
+      items: [
+        'Cement & Steel',
+        'Bricks / blocks',
+        'M-sand & Aggregates',
+        'Tiles & Flooring',
+        'Plumbing materials',
+        'Electrical materials',
+        'Doors, windows & Paint',
+      ],
+    },
+    {
+      num: '05',
+      title: 'CONSTRUCTION',
+      intro: 'Moving into site execution following strict project sequence and site safety.',
+      items: [
+        'Labour & Masonry',
+        'RCC structural works',
+        'Plumbing & Electrical',
+        'Plastering & Flooring',
+        'Doors / windows installation',
+        'Painting & Finishing',
+        'External works',
+      ],
+    },
+    {
+      num: '06',
+      title: 'QUALITY CONTROL',
+      intro: 'Checks incorporated throughout construction rather than waiting until the end.',
+      items: [
+        'Material quality & testing',
+        'Measurements & Workmanship',
+        'Construction sequence',
+        'Level and alignment',
+        'Concrete / RCC execution',
+        'Waterproofing checks',
+        'Finishing quality',
+      ],
+    },
+    {
+      num: '07',
+      title: 'FINISHING',
+      intro: 'Bringing together interior, exterior, and utility fittings for handover readiness.',
+      items: [
+        'Flooring & Painting',
+        'Sanitary & Plumbing fixtures',
+        'Doors, windows & Joinery',
+        'Electrical fittings',
+        'External works & Cleaning',
+        'Final site corrections',
+      ],
+    },
+    {
+      num: '08',
+      title: 'COMPLETION & HANDOVER',
+      intro: 'Reviewing completed work against agreed scope to deliver an inspected property.',
+      items: [
+        'Agreed scope review',
+        'Final quality walkthrough',
+        'Organised documentation',
+        'Site cleaning & handover',
+        'Key delivery',
+      ],
+    },
   ];
 
+  const [activeTab, setActiveTab] = useState(0);
+
   return (
-    <section className="section" style={{ backgroundColor: 'var(--color-white)', borderTop: '1px solid var(--color-border)', borderBottom: '1px solid var(--color-border)', overflow: 'hidden' }}>
+    <section className="section" style={{ backgroundColor: 'var(--color-white)', borderTop: '1px solid var(--color-border)', borderBottom: '1px solid var(--color-border)' }}>
       <div className="container">
         
         {/* Header */}
-        <div style={{ maxWidth: '700px', marginBottom: '60px' }}>
+        <div style={{ maxWidth: '750px', marginBottom: '60px' }}>
           <span className="section-tag">EXECUTION ROADMAP</span>
           <h2
             style={{
@@ -33,102 +136,69 @@ export default function ProcessSection() {
             OUR 8-STAGE <span className="text-orange">PROCESS.</span>
           </h2>
           <p style={{ fontSize: '1.05rem', color: 'var(--color-text-muted)', marginTop: '12px' }}>
-            [Process Subtitle Placeholder] A disciplined engineering workflow designed to eliminate budget surprises and ensure structural perfection.
+            A disciplined engineering workflow designed to reduce unexpected cost variations and deliver organized building handover.
           </p>
         </div>
 
-        {/* Desktop Horizontal Scrolling Editorial Timeline */}
-        <div className="desktop-timeline-only" style={{ position: 'relative', paddingBottom: '20px' }}>
-          
-          {/* Horizontal Connecting Line */}
-          <div
-            style={{
-              position: 'absolute',
-              top: '40px',
-              left: 0,
-              right: 0,
-              height: '3px',
-              backgroundColor: 'var(--color-border)',
-              zIndex: 1,
-            }}
-          />
-
-          <div
-            style={{
-              display: 'flex',
-              gap: '24px',
-              overflowX: 'auto',
-              paddingTop: '10px',
-              paddingBottom: '30px',
-              scrollbarWidth: 'thin',
-              zIndex: 2,
-              position: 'relative',
-            }}
-          >
-            {steps.map((step) => (
-              <div
-                key={step.num}
-                style={{
-                  minWidth: '280px',
-                  maxWidth: '300px',
-                  backgroundColor: 'var(--color-bg)',
-                  border: '1px solid var(--color-border)',
-                  padding: '30px 24px',
-                  position: 'relative',
-                  flexShrink: 0,
-                  transition: 'var(--transition-smooth)',
-                }}
-                className="editorial-card"
-              >
-                {/* Stage Badge Circle */}
-                <div
+        {/* Interactive Desktop Stage Selector Tabs */}
+        <div className="desktop-timeline-only" style={{ marginBottom: '40px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(8, 1fr)', gap: '8px', borderBottom: '2px solid var(--color-border)', paddingBottom: '16px' }}>
+            {steps.map((st, idx) => {
+              const isActive = activeTab === idx;
+              return (
+                <button
+                  key={st.num}
+                  onClick={() => setActiveTab(idx)}
                   style={{
-                    width: '44px',
-                    height: '44px',
-                    backgroundColor: 'var(--color-orange)',
-                    color: 'var(--color-white)',
-                    fontFamily: 'var(--font-heading)',
-                    fontSize: '1rem',
-                    fontWeight: 900,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    borderRadius: '2px',
-                    marginBottom: '20px',
-                    boxShadow: '0 4px 12px rgba(255, 90, 20, 0.3)',
+                    background: 'none',
+                    border: 'none',
+                    borderBottom: isActive ? '3px solid var(--color-orange)' : '3px solid transparent',
+                    paddingBottom: '8px',
+                    cursor: 'pointer',
+                    textAlign: 'left',
+                    transition: 'all 0.2s ease',
                   }}
                 >
-                  {step.num}
-                </div>
-
-                <h3
-                  style={{
-                    fontFamily: 'var(--font-heading)',
-                    fontSize: '1.25rem',
-                    fontWeight: 800,
-                    color: 'var(--color-navy)',
-                    marginBottom: '10px',
-                    textTransform: 'uppercase',
-                  }}
-                >
-                  {step.title}
-                </h3>
-
-                <p style={{ fontSize: '0.88rem', color: 'var(--color-text-muted)', lineHeight: 1.5 }}>
-                  {step.desc}
-                </p>
-              </div>
-            ))}
+                  <span style={{ display: 'block', fontSize: '0.75rem', fontWeight: 800, color: isActive ? 'var(--color-orange)' : 'var(--color-text-muted)' }}>
+                    {st.num}
+                  </span>
+                  <span style={{ display: 'block', fontSize: '0.85rem', fontFamily: 'var(--font-heading)', fontWeight: 700, color: isActive ? 'var(--color-navy)' : 'var(--color-text-muted)', textTransform: 'uppercase' }}>
+                    {st.title}
+                  </span>
+                </button>
+              );
+            })}
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.8rem', color: 'var(--color-text-muted)', marginTop: '8px' }}>
-            <span>Scroll horizontally to view full process</span>
-            <ArrowRight size={14} color="#FF5A14" />
+          {/* Active Stage Detailed Display */}
+          <div className="editorial-card" style={{ padding: '40px', backgroundColor: 'var(--color-bg)', marginTop: '24px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '16px' }}>
+              <span style={{ fontFamily: 'var(--font-heading)', fontSize: '2.5rem', fontWeight: 900, color: 'var(--color-orange)', lineHeight: 1 }}>
+                {steps[activeTab].num}
+              </span>
+              <div>
+                <h3 style={{ fontSize: '1.8rem', fontFamily: 'var(--font-heading)', color: 'var(--color-navy)', textTransform: 'uppercase' }}>
+                  {steps[activeTab].title}
+                </h3>
+                <p style={{ fontSize: '0.98rem', color: 'var(--color-text-muted)' }}>
+                  {steps[activeTab].intro}
+                </p>
+              </div>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '14px', marginTop: '24px' }}>
+              {steps[activeTab].items.map((sub) => (
+                <div key={sub} style={{ display: 'flex', alignItems: 'center', gap: '10px', backgroundColor: '#FFF', padding: '12px 16px', border: '1px solid var(--color-border)', borderRadius: '2px' }}>
+                  <CheckCircle2 size={16} color="#FF5A14" />
+                  <span style={{ fontSize: '0.9rem', color: 'var(--color-navy)', fontWeight: 600 }}>{sub}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
         {/* Mobile Vertical Timeline */}
-        <div className="mobile-timeline-only" style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+        <div className="mobile-timeline-only" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
           {steps.map((step) => (
             <div
               key={step.num}
@@ -139,28 +209,34 @@ export default function ProcessSection() {
                 borderRight: '1px solid var(--color-border)',
                 borderBottom: '1px solid var(--color-border)',
                 padding: '24px',
-                display: 'flex',
-                gap: '16px',
               }}
             >
-              <span
-                style={{
-                  fontFamily: 'var(--font-heading)',
-                  fontSize: '1.5rem',
-                  fontWeight: 900,
-                  color: 'var(--color-orange)',
-                  lineHeight: 1,
-                }}
-              >
-                {step.num}
-              </span>
-              <div>
-                <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--color-navy)', textTransform: 'uppercase', marginBottom: '6px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
+                <span
+                  style={{
+                    fontFamily: 'var(--font-heading)',
+                    fontSize: '1.6rem',
+                    fontWeight: 900,
+                    color: 'var(--color-orange)',
+                  }}
+                >
+                  {step.num}
+                </span>
+                <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--color-navy)', textTransform: 'uppercase' }}>
                   {step.title}
                 </h3>
-                <p style={{ fontSize: '0.88rem', color: 'var(--color-text-muted)', lineHeight: 1.5 }}>
-                  {step.desc}
-                </p>
+              </div>
+
+              <p style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)', marginBottom: '16px' }}>
+                {step.intro}
+              </p>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                {step.items.map((sub) => (
+                  <div key={sub} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.86rem', color: 'var(--color-navy)', fontWeight: 600 }}>
+                    <span style={{ color: '#FF5A14' }}>—</span> {sub}
+                  </div>
+                ))}
               </div>
             </div>
           ))}

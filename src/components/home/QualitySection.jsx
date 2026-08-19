@@ -1,137 +1,73 @@
 import React from 'react';
-import { Shield, Check, Award } from 'lucide-react';
+import { ShieldCheck, Check, Award, Layers } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function QualitySection() {
-  const benchmarks = [
-    'IS Code Compliant Concrete & Steel Testing',
-    'Multi-Tier Structural Integrity Verification',
-    'Waterproofing & Thermal Moisture Barriers',
-    'Zero-Tolerance Dimensional Tolerances',
+  const qualityPillars = [
+    { title: 'Material Selection', desc: 'Sourcing certified cement, steel, bricks, M-sand, and aggregates matching structural specs and project budget.' },
+    { title: 'Structural Execution', desc: 'Concrete mix design, RCC framing, and masonry work adhering strictly to Indian Standard (IS) codes.' },
+    { title: 'Site Supervision', desc: 'Direct daily oversight by civil engineering professionals ensuring zero deviation from blueprints.' },
+    { title: 'Workmanship', desc: 'Skilled labour deployment for plastering, tile alignment, joinery, and watertight plumbing.' },
+    { title: 'Measurements', desc: 'Precise quantity surveying and bill measurements ensuring complete clarity for every sq.ft built.' },
+    { title: 'Quality Checks', desc: 'Multi-stage concrete cube testing, level/alignment verification, and waterproofing inspections.' },
+    { title: 'Safety Governance', desc: 'Site safety protocols, protective equipment, and zero-compromise worker protection during execution.' },
+    { title: 'Documentation', desc: 'Transparent quotations, estimates, work orders, bills, and complete structural project records.' },
   ];
 
   return (
     <section className="section" style={{ backgroundColor: 'var(--color-white)', borderTop: '1px solid var(--color-border)', borderBottom: '1px solid var(--color-border)' }}>
       <div className="container">
         
+        <div style={{ maxWidth: '800px', marginBottom: '60px' }}>
+          <span className="section-tag">CONSTRUCTION GOVERNANCE</span>
+          <h2
+            style={{
+              fontFamily: 'var(--font-heading)',
+              fontSize: 'clamp(2.2rem, 3.8vw, 3.8rem)',
+              fontWeight: 800,
+              color: 'var(--color-navy)',
+              lineHeight: 1.1,
+              letterSpacing: '-0.02em',
+              marginTop: '12px',
+              marginBottom: '20px',
+            }}
+          >
+            QUALITY & CONSTRUCTION <span className="text-orange">APPROACH.</span>
+          </h2>
+          <p style={{ fontSize: '1.08rem', color: 'var(--color-text-muted)', lineHeight: 1.7 }}>
+            Quality is not limited to the final appearance of a building. It begins with appropriate materials, correct construction practices, proper supervision, workmanship and quality checks throughout the project.
+          </p>
+        </div>
+
+        {/* 8 Editorial Quality Cards */}
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
-            gap: '60px',
-            alignItems: 'center',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: '24px',
           }}
         >
-          {/* Left Side: Large Construction Image Visual */}
-          <div style={{ position: 'relative' }}>
-            <div
-              style={{
-                height: '480px',
-                border: '1px solid var(--color-navy)',
-                position: 'relative',
-                boxShadow: '-20px 20px 0px rgba(255, 90, 20, 0.1)',
-                overflow: 'hidden',
-              }}
-            >
-              <svg
-                width="100%"
-                height="100%"
-                viewBox="0 0 600 480"
-                style={{ display: 'block', backgroundColor: '#0B3475' }}
-              >
-                <rect width="600" height="480" fill="#0B3475" />
-                <path d="M 0 480 L 300 150 L 600 480 Z" fill="none" stroke="#FF5A14" strokeWidth="4" />
-                <path d="M 100 480 L 300 240 L 500 480 Z" fill="none" stroke="#FFFFFF" strokeWidth="2" opacity="0.5" />
-                <line x1="300" y1="150" x2="300" y2="480" stroke="#FF5A14" strokeWidth="2" strokeDasharray="6 6" />
-                <text x="50%" y="45%" textAnchor="middle" fill="#FFFFFF" fontSize="22" fontFamily="Outfit" fontWeight="900" letterSpacing="3">
-                  CONSTRUCTION QUALITY CONTROL
-                </text>
-                <text x="50%" y="54%" textAnchor="middle" fill="#FF5A14" fontSize="14" fontFamily="Inter" fontWeight="600" letterSpacing="2">
-                  [LARGE CONSTRUCTION IMAGE PLACEHOLDER]
-                </text>
-              </svg>
-
-              <div
-                style={{
-                  position: 'absolute',
-                  top: '24px',
-                  right: '24px',
-                  backgroundColor: 'var(--color-orange)',
-                  color: 'var(--color-white)',
-                  padding: '16px 20px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '12px',
-                  borderRadius: '2px',
-                }}
-              >
-                <Award size={28} />
-                <div>
-                  <p style={{ fontSize: '0.72rem', letterSpacing: '0.12em', fontWeight: 700, textTransform: 'uppercase' }}>CERTIFIED</p>
-                  <p style={{ fontSize: '0.95rem', fontFamily: 'var(--font-heading)', fontWeight: 800 }}>IS CODE STANDARDS</p>
+          {qualityPillars.map((item, idx) => (
+            <div key={item.title} className="editorial-card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
+                  <div style={{ width: '36px', height: '36px', backgroundColor: 'rgba(255, 90, 20, 0.12)', border: '1px solid var(--color-orange)', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '2px' }}>
+                    <Check size={18} color="#FF5A14" />
+                  </div>
+                  <span style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)', fontWeight: 700, fontFamily: 'var(--font-heading)' }}>
+                    0{idx + 1}
+                  </span>
                 </div>
+
+                <h3 style={{ fontSize: '1.2rem', fontFamily: 'var(--font-heading)', color: 'var(--color-navy)', marginBottom: '8px' }}>
+                  {item.title}
+                </h3>
+                <p style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)', lineHeight: 1.6 }}>
+                  {item.desc}
+                </p>
               </div>
             </div>
-          </div>
-
-          {/* Right Side: Heading & Quality Benchmarks */}
-          <div>
-            <span className="section-tag">UNCOMPROMISING STANDARDS</span>
-            
-            <h2
-              style={{
-                fontFamily: 'var(--font-heading)',
-                fontSize: 'clamp(2.2rem, 3.5vw, 3.5rem)',
-                fontWeight: 800,
-                color: 'var(--color-navy)',
-                lineHeight: 1.1,
-                letterSpacing: '-0.02em',
-                margin: '16px 0 24px 0',
-              }}
-            >
-              QUALITY IS NOT AN ACCIDENT. <br />
-              IT IS OUR <span className="text-orange">ENGINEERING BASIS.</span>
-            </h2>
-
-            <p
-              style={{
-                fontSize: '1.08rem',
-                color: 'var(--color-text-muted)',
-                lineHeight: 1.7,
-                marginBottom: '32px',
-              }}
-            >
-              [Quality Heading & Description Placeholder] Every raw material that arrives at a First Brick construction site undergoes strict quality verification. From steel tensile strength to concrete compressive testing, we implement zero-compromise site governance.
-            </p>
-
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '40px' }}>
-              {benchmarks.map((item) => (
-                <li key={item} style={{ display: 'flex', alignItems: 'center', gap: '14px', fontSize: '0.98rem', fontWeight: 600, color: 'var(--color-navy)' }}>
-                  <div
-                    style={{
-                      width: '24px',
-                      height: '24px',
-                      backgroundColor: 'rgba(255, 90, 20, 0.15)',
-                      border: '1px solid var(--color-orange)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      borderRadius: '2px',
-                      flexShrink: 0,
-                    }}
-                  >
-                    <Check size={16} color="#FF5A14" />
-                  </div>
-                  {item}
-                </li>
-              ))}
-            </ul>
-
-            <Link to="/quality" className="btn-primary">
-              EXPLORE OUR QUALITY APPROACH
-            </Link>
-          </div>
-
+          ))}
         </div>
 
       </div>

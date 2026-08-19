@@ -2,37 +2,48 @@ import React from 'react';
 import { Layers, Calculator, HardHat, FileText, MessageSquare, Target } from 'lucide-react';
 
 export default function DifferenceSection() {
-  const features = [
+  const strengths = [
     {
       icon: Layers,
       title: 'End-to-End Coordination',
-      desc: '[Feature Description Placeholder] Seamless integration between architectural design, structural engineering, site workforce, and material suppliers under single-point leadership.',
+      desc: 'One coordinated approach from initial discussion through completion.',
     },
     {
       icon: Calculator,
       title: 'Quantity & Cost Awareness',
-      desc: '[Feature Description Placeholder] Comprehensive bill of quantities (BOQ) prepared prior to build, preventing cost inflation and budget overruns.',
+      desc: 'BOQ, estimation, measurements and project cost monitoring.',
     },
     {
       icon: HardHat,
       title: 'Site Experience',
-      desc: '[Feature Description Placeholder] Hands-on civil engineering leadership directly on-site, ensuring immediate problem-solving and rigorous quality assurance.',
+      desc: 'Practical understanding of construction execution and site coordination.',
     },
     {
       icon: FileText,
       title: 'Professional Documentation',
-      desc: '[Feature Description Placeholder] Standardized milestone reporting, architectural drawings compliance, legal approvals, and warranty handovers.',
+      desc: 'Quotations, estimates, work orders, bills, measurements and project records.',
     },
     {
       icon: MessageSquare,
       title: 'Client Communication',
-      desc: '[Feature Description Placeholder] Scheduled weekly client walk-throughs, digital photo progress logs, and complete financial clarity.',
+      desc: 'Keeping the client informed about important project decisions and progress.',
     },
     {
       icon: Target,
       title: 'Execution Focus',
-      desc: '[Feature Description Placeholder] Unyielding commitment to timeline delivery without sacrificing structural durability or architectural detail.',
+      desc: 'Turning drawings and plans into properly coordinated site work.',
     },
+  ];
+
+  const workflowSteps = [
+    'Requirement',
+    'Design',
+    'Estimate',
+    'Procurement',
+    'Execution',
+    'Quality',
+    'Finishing',
+    'Handover',
   ];
 
   return (
@@ -40,7 +51,7 @@ export default function DifferenceSection() {
       <div className="container">
         
         {/* Header */}
-        <div style={{ maxWidth: '800px', marginBottom: '60px' }}>
+        <div style={{ maxWidth: '850px', marginBottom: '48px' }}>
           <span className="section-tag" style={{ backgroundColor: 'var(--color-orange)', color: 'var(--color-white)' }}>
             STUDIO ADVANTAGE
           </span>
@@ -55,14 +66,33 @@ export default function DifferenceSection() {
               marginTop: '16px',
             }}
           >
-            WHAT MAKES <span style={{ color: 'var(--color-orange)' }}>FIRST BRICK</span> DIFFERENT.
+            ENGINEERING BEHIND <span style={{ color: 'var(--color-orange)' }}>EVERY DECISION.</span>
           </h2>
-          <p style={{ fontSize: '1.1rem', color: 'rgba(255, 255, 255, 0.7)', marginTop: '16px' }}>
-            [Editorial Subtitle Placeholder] Unlike generic contractors, First Brick operates as an engineering-led construction studio, combining architectural sensitivity with rigorous civil discipline.
+          <p style={{ fontSize: '1.1rem', color: 'rgba(255, 255, 255, 0.75)', marginTop: '16px', lineHeight: 1.7 }}>
+            We aim to combine the practical realities of construction sites with engineering-based planning. Instead of simply executing work, we look at the complete project ecosystem.
           </p>
         </div>
 
-        {/* 6 Feature Blocks Grid */}
+        {/* Process Flow Line Ribbon */}
+        <div style={{ marginBottom: '60px', backgroundColor: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.15)', padding: '24px 32px' }}>
+          <p style={{ fontSize: '0.75rem', color: 'var(--color-orange)', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 700, marginBottom: '16px' }}>
+            COMPLETE PROJECT LIFECYCLE
+          </p>
+          <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
+            {workflowSteps.map((step, idx) => (
+              <React.Fragment key={step}>
+                <span style={{ fontSize: '0.92rem', fontFamily: 'var(--font-heading)', fontWeight: 700, color: '#FFF' }}>
+                  {step}
+                </span>
+                {idx < workflowSteps.length - 1 && (
+                  <span style={{ color: 'var(--color-orange)', fontWeight: 900 }}>→</span>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
+        </div>
+
+        {/* 6 Key Strengths Grid */}
         <div
           style={{
             display: 'grid',
@@ -70,7 +100,7 @@ export default function DifferenceSection() {
             gap: '30px',
           }}
         >
-          {features.map((item, idx) => {
+          {strengths.map((item, idx) => {
             const IconComp = item.icon;
             return (
               <div
@@ -123,7 +153,7 @@ export default function DifferenceSection() {
                   {item.title}
                 </h3>
 
-                <p style={{ fontSize: '0.92rem', color: 'rgba(255, 255, 255, 0.65)', lineHeight: 1.6 }}>
+                <p style={{ fontSize: '0.92rem', color: 'rgba(255, 255, 255, 0.7)', lineHeight: 1.6 }}>
                   {item.desc}
                 </p>
               </div>

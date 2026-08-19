@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, ArrowUpRight, Play } from 'lucide-react';
+import { MapPin, Phone, Mail, Globe, ArrowUpRight } from 'lucide-react';
 
-export default function Footer({ onReplayIntro }) {
+export default function Footer() {
   return (
     <footer
       style={{
@@ -87,37 +87,12 @@ export default function Footer({ onReplayIntro }) {
               “Not only first brick, last brick also.”
             </blockquote>
 
-            <p style={{ fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.65)', fontWeight: 400 }}>
-              From concept to completion. Delivering high-end civil construction, architectural engineering, and transparent project management.
+            <p style={{ fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.7)', fontWeight: 400 }}>
+              From concept to completion. Civil Construction • Engineering • Quantity Surveying • Project Management in Salem, Tamil Nadu.
             </p>
-
-            {onReplayIntro && (
-              <button
-                onClick={onReplayIntro}
-                style={{
-                  marginTop: '24px',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  background: 'rgba(255, 255, 255, 0.08)',
-                  border: '1px solid rgba(255, 255, 255, 0.2)',
-                  color: 'var(--color-white)',
-                  padding: '8px 16px',
-                  borderRadius: '2px',
-                  cursor: 'pointer',
-                  fontSize: '0.78rem',
-                  letterSpacing: '0.1em',
-                  textTransform: 'uppercase',
-                  transition: 'var(--transition-smooth)',
-                }}
-              >
-                <Play size={14} fill="#FF5A14" color="#FF5A14" />
-                Replay Brand Intro Animation
-              </button>
-            )}
           </div>
 
-          {/* Column 2: Essential Pages */}
+          {/* Column 2: Navigation Links */}
           <div>
             <h3
               style={{
@@ -129,16 +104,16 @@ export default function Footer({ onReplayIntro }) {
                 fontWeight: 700,
               }}
             >
-              WEBSITE PAGES
+              MAIN PAGES
             </h3>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {[
-                { name: 'Home', path: '/' },
-                { name: 'About Us', path: '/about' },
+                { name: 'Cover / Home', path: '/' },
+                { name: 'About First Brick', path: '/about' },
                 { name: 'Founder Profile', path: '/founder' },
                 { name: 'Our Services', path: '/services' },
-                { name: 'Execution Process', path: '/process' },
-                { name: 'Projects Portfolio', path: '/projects' },
+                { name: 'Our Process', path: '/process' },
+                { name: 'Why First Brick', path: '/why-first-brick' },
               ].map((item) => (
                 <li key={item.name}>
                   <Link
@@ -161,7 +136,7 @@ export default function Footer({ onReplayIntro }) {
             </ul>
           </div>
 
-          {/* Column 3: Credentials & Legal */}
+          {/* Column 3: Approach & Legal Links */}
           <div>
             <h3
               style={{
@@ -173,15 +148,16 @@ export default function Footer({ onReplayIntro }) {
                 fontWeight: 700,
               }}
             >
-              APPROACH & CREDENTIALS
+              CAPABILITIES & LEGAL
             </h3>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {[
+                { name: 'Project Capabilities', path: '/capabilities' },
                 { name: 'Quality & Approach', path: '/quality' },
                 { name: 'Client Commitment', path: '/commitment' },
                 { name: 'Company Credentials', path: '/credentials' },
                 { name: 'Terms & Conditions', path: '/terms' },
-                { name: 'Contact Studio', path: '/contact' },
+                { name: 'Back Cover / Contact', path: '/contact' },
               ].map((item) => (
                 <li key={item.name}>
                   <Link
@@ -204,7 +180,7 @@ export default function Footer({ onReplayIntro }) {
             </ul>
           </div>
 
-          {/* Column 4: Contact & Office Location */}
+          {/* Column 4: Location & Contact */}
           <div>
             <h3
               style={{
@@ -216,14 +192,14 @@ export default function Footer({ onReplayIntro }) {
                 fontWeight: 700,
               }}
             >
-              HEADQUARTERS
+              STUDIO LOCATION
             </h3>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '18px', fontSize: '0.92rem', color: 'rgba(255, 255, 255, 0.85)' }}>
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
                 <MapPin size={20} color="#FF5A14" style={{ flexShrink: 0, marginTop: '2px' }} />
                 <div>
-                  <strong style={{ color: '#FFF' }}>First Brick Studio</strong>
+                  <strong style={{ color: '#FFF' }}>FIRST BRICK Studio</strong>
                   <br />
                   Salem, Tamil Nadu, India
                 </div>
@@ -231,12 +207,17 @@ export default function Footer({ onReplayIntro }) {
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                 <Phone size={18} color="#FF5A14" style={{ flexShrink: 0 }} />
-                <span>+91 (0) 98765 43210 [Placeholder]</span>
+                <span>Phone: <strong style={{ color: 'var(--color-orange)' }}>To be added</strong></span>
               </div>
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                 <Mail size={18} color="#FF5A14" style={{ flexShrink: 0 }} />
-                <span>aravinth@firstbrick.in [Placeholder]</span>
+                <span>Email: <strong style={{ color: 'var(--color-orange)' }}>To be added</strong></span>
+              </div>
+
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <Globe size={18} color="#FF5A14" style={{ flexShrink: 0 }} />
+                <span>Website: <strong style={{ color: 'var(--color-orange)' }}>To be added</strong></span>
               </div>
             </div>
           </div>
@@ -258,11 +239,12 @@ export default function Footer({ onReplayIntro }) {
           }}
         >
           <div>
-            © {new Date().getFullYear()} <strong>FIRST BRICK</strong>. All Rights Reserved. Designed for Aravinth Jaganathan.
+            © {new Date().getFullYear()} <strong>FIRST BRICK</strong>. All Rights Reserved. Founded by Aravinth Jaganathan.
           </div>
           <div style={{ display: 'flex', gap: '24px' }}>
             <Link to="/terms" style={{ color: 'inherit', textDecoration: 'none' }}>Terms & Conditions</Link>
-            <Link to="/contact" style={{ color: 'inherit', textDecoration: 'none' }}>Contact Us</Link>
+            <Link to="/credentials" style={{ color: 'inherit', textDecoration: 'none' }}>Credentials</Link>
+            <Link to="/contact" style={{ color: 'inherit', textDecoration: 'none' }}>Contact</Link>
           </div>
         </div>
 

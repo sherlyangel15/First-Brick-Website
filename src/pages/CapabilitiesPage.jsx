@@ -23,7 +23,7 @@ export default function CapabilitiesPage() {
               <span className="text-orange">CAPABILITIES.</span>
             </h1>
             <p style={{ fontSize: '1.2rem', color: 'var(--color-text-muted)', maxWidth: '640px' }}>
-              [Capabilities Header Placeholder] Explore our civil construction capabilities spanning individual homes, luxury villas, commercial projects, structural retrofitting, and quantity surveying.
+              Explore our civil construction capabilities spanning individual homes, luxury villas, commercial projects, structural retrofitting, and quantity surveying.
             </p>
           </div>
         </section>

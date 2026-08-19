@@ -1,54 +1,73 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, Building2, Compass, ShieldCheck } from 'lucide-react';
+import { ArrowUpRight, Building2, Compass, ShieldCheck, Check } from 'lucide-react';
 
 export default function ServicesSection() {
   const services = [
     {
       num: '01',
       title: 'CONSTRUCTION',
-      desc: '[Construction Service Description Placeholder] Turnkey residential & commercial building solutions, from structural foundation, brickwork, and reinforced concrete to interior finishing.',
+      desc: 'Turnkey civil construction solutions tailored for residential & commercial builds.',
+      items: [
+        'Residential buildings',
+        'Villas',
+        'Individual houses',
+        'Commercial construction',
+        'Renovation',
+      ],
       link: '/services#construction',
-      icon: Building2,
       svgPattern: (
-        <svg width="100%" height="220" viewBox="0 0 400 220" style={{ display: 'block', backgroundColor: '#0B3475' }}>
-          <rect width="400" height="220" fill="#0B3475" />
-          <path d="M 50 180 L 150 60 L 250 180 Z" fill="none" stroke="#FF5A14" strokeWidth="3" />
-          <path d="M 150 180 L 250 80 L 350 180 Z" fill="none" stroke="#FFFFFF" strokeWidth="2" opacity="0.6" />
-          <line x1="20" y1="180" x2="380" y2="180" stroke="#FF5A14" strokeWidth="3" />
-          <text x="40" y="40" fill="#FFF" fontSize="14" fontFamily="Outfit" fontWeight="700">FOUNDATION & CONCRETE</text>
+        <svg width="100%" height="200" viewBox="0 0 400 200" style={{ display: 'block', backgroundColor: '#0B3475' }}>
+          <rect width="400" height="200" fill="#0B3475" />
+          <path d="M 50 160 L 150 50 L 250 160 Z" fill="none" stroke="#FF5A14" strokeWidth="3" />
+          <path d="M 150 160 L 250 70 L 350 160 Z" fill="none" stroke="#FFFFFF" strokeWidth="2" opacity="0.6" />
+          <line x1="20" y1="160" x2="380" y2="160" stroke="#FF5A14" strokeWidth="3" />
+          <text x="30" y="36" fill="#FFF" fontSize="13" fontFamily="Outfit" fontWeight="700" letterSpacing="2">BUILDING CONSTRUCTION</text>
         </svg>
       ),
     },
     {
       num: '02',
       title: 'ENGINEERING',
-      desc: '[Engineering Service Description Placeholder] Comprehensive structural design, load calculation, civil engineering analysis, estimation, and architectural compliance.',
+      desc: 'Pre-construction engineering, quantity surveying, BOQ creation, and drafting.',
+      items: [
+        'Quantity surveying',
+        'Estimation',
+        'BOQ preparation',
+        'AutoCAD drafting',
+        'Site engineering',
+        'Billing',
+      ],
       link: '/services#engineering',
-      icon: Compass,
       svgPattern: (
-        <svg width="100%" height="220" viewBox="0 0 400 220" style={{ display: 'block', backgroundColor: '#07224f' }}>
-          <rect width="400" height="220" fill="#07224f" />
-          <circle cx="200" cy="110" r="70" fill="none" stroke="#FF5A14" strokeWidth="2" strokeDasharray="6 6" />
-          <line x1="200" y1="20" x2="200" y2="200" stroke="#FFFFFF" opacity="0.5" strokeWidth="1.5" />
-          <line x1="100" y1="110" x2="300" y2="110" stroke="#FFFFFF" opacity="0.5" strokeWidth="1.5" />
-          <text x="40" y="40" fill="#FFF" fontSize="14" fontFamily="Outfit" fontWeight="700">STRUCTURAL ANALYSIS</text>
+        <svg width="100%" height="200" viewBox="0 0 400 200" style={{ display: 'block', backgroundColor: '#07224f' }}>
+          <rect width="400" height="200" fill="#07224f" />
+          <circle cx="200" cy="100" r="60" fill="none" stroke="#FF5A14" strokeWidth="2" strokeDasharray="6 6" />
+          <line x1="200" y1="20" x2="200" y2="180" stroke="#FFFFFF" opacity="0.5" strokeWidth="1.5" />
+          <line x1="100" y1="100" x2="300" y2="100" stroke="#FFFFFF" opacity="0.5" strokeWidth="1.5" />
+          <text x="30" y="36" fill="#FFF" fontSize="13" fontFamily="Outfit" fontWeight="700" letterSpacing="2">ENGINEERING & BOQ</text>
         </svg>
       ),
     },
     {
       num: '03',
       title: 'PROJECT MANAGEMENT',
-      desc: '[Project Management Description Placeholder] End-to-end site oversight, quantity surveying, material procurement, timeline scheduling, and site safety management.',
+      desc: 'End-to-end site governance, material procurement, labour coordination, and safety.',
+      items: [
+        'Procurement',
+        'Labour coordination',
+        'Quality control',
+        'Cost monitoring',
+        'Project scheduling',
+      ],
       link: '/services#management',
-      icon: ShieldCheck,
       svgPattern: (
-        <svg width="100%" height="220" viewBox="0 0 400 220" style={{ display: 'block', backgroundColor: '#041635' }}>
-          <rect width="400" height="220" fill="#041635" />
-          <rect x="60" y="70" width="80" height="100" fill="none" stroke="#FF5A14" strokeWidth="2" />
-          <rect x="160" y="40" width="80" height="130" fill="none" stroke="#FFFFFF" strokeWidth="2" />
-          <rect x="260" y="90" width="80" height="80" fill="none" stroke="#FF5A14" strokeWidth="2" />
-          <text x="40" y="40" fill="#FFF" fontSize="14" fontFamily="Outfit" fontWeight="700">EXECUTION GOVERNANCE</text>
+        <svg width="100%" height="200" viewBox="0 0 400 200" style={{ display: 'block', backgroundColor: '#041635' }}>
+          <rect width="400" height="200" fill="#041635" />
+          <rect x="60" y="60" width="70" height="90" fill="none" stroke="#FF5A14" strokeWidth="2" />
+          <rect x="150" y="35" width="70" height="115" fill="none" stroke="#FFFFFF" strokeWidth="2" />
+          <rect x="240" y="80" width="70" height="70" fill="none" stroke="#FF5A14" strokeWidth="2" />
+          <text x="30" y="36" fill="#FFF" fontSize="13" fontFamily="Outfit" fontWeight="700" letterSpacing="2">SITE GOVERNANCE</text>
         </svg>
       ),
     },
@@ -61,7 +80,7 @@ export default function ServicesSection() {
         {/* Header */}
         <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '60px', gap: '20px' }}>
           <div>
-            <span className="section-tag">CORE CAPABILITIES</span>
+            <span className="section-tag">SERVICES & OFFERINGS</span>
             <h2
               style={{
                 fontFamily: 'var(--font-heading)',
@@ -101,7 +120,6 @@ export default function ServicesSection() {
               }}
             >
               <div>
-                {/* SVG Visual Placeholder */}
                 <div style={{ position: 'relative', overflow: 'hidden' }}>
                   {item.svgPattern}
                   <span
@@ -120,7 +138,6 @@ export default function ServicesSection() {
                   </span>
                 </div>
 
-                {/* Content */}
                 <div style={{ padding: '32px' }}>
                   <h3
                     style={{
@@ -138,13 +155,21 @@ export default function ServicesSection() {
                   <p style={{ fontSize: '0.94rem', color: 'var(--color-text-muted)', lineHeight: 1.6, marginBottom: '24px' }}>
                     {item.desc}
                   </p>
+
+                  <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                    {item.items.map((sub) => (
+                      <li key={sub} style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.9rem', color: 'var(--color-navy)', fontWeight: 600 }}>
+                        <Check size={16} color="#FF5A14" />
+                        {sub}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
 
-              {/* Card Footer Link */}
               <div style={{ padding: '0 32px 32px 32px' }}>
                 <Link
-                  to={item.link}
+                  to="/services"
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',
@@ -156,10 +181,9 @@ export default function ServicesSection() {
                     color: 'var(--color-orange)',
                     textTransform: 'uppercase',
                     textDecoration: 'none',
-                    transition: 'gap 0.2s ease',
                   }}
                 >
-                  VIEW SERVICE DETAILS
+                  LEARN MORE ABOUT {item.title}
                   <ArrowUpRight size={16} />
                 </Link>
               </div>

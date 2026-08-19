@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function AboutSection() {
@@ -32,22 +32,38 @@ export default function AboutSection() {
                 letterSpacing: '-0.02em',
               }}
             >
-              REDEFINING CIVIL CONSTRUCTION THROUGH <span className="text-orange">PRECISION & INTEGRITY.</span>
+              BUILT FROM THE FIRST IDEA TO THE <span className="text-orange">FINAL BRICK.</span>
             </h2>
+            
+            <blockquote
+              style={{
+                marginTop: '32px',
+                padding: '24px',
+                backgroundColor: 'var(--color-bg)',
+                borderLeft: '4px solid var(--color-orange)',
+                fontFamily: 'var(--font-heading)',
+                fontSize: '1.25rem',
+                fontStyle: 'italic',
+                color: 'var(--color-navy)',
+                lineHeight: 1.4,
+              }}
+            >
+              “Not only first brick, last brick also.”
+            </blockquote>
           </div>
 
-          {/* Right Column: Short Paragraph Placeholder & CTA Link */}
+          {/* Right Column: Paragraph Content */}
           <div>
             <p
               style={{
-                fontSize: '1.15rem',
+                fontSize: '1.1rem',
                 color: 'var(--color-text-primary)',
                 lineHeight: 1.7,
-                marginBottom: '24px',
+                marginBottom: '20px',
                 fontWeight: 400,
               }}
             >
-              [About Paragraph Placeholder] FIRST BRICK is a specialized civil construction and structural engineering firm founded by Aravinth Jaganathan. Built on a foundation of technical mastery, end-to-end accountability, and meticulous cost control, we bridge the gap between visionary architectural concepts and flawless site execution.
+              First Brick by Aravinth Jaganathan is a civil construction and engineering venture based in Salem, Tamil Nadu, focused on delivering end-to-end construction solutions for residential and selected commercial projects.
             </p>
 
             <p
@@ -55,10 +71,21 @@ export default function AboutSection() {
                 fontSize: '1rem',
                 color: 'var(--color-text-muted)',
                 lineHeight: 1.7,
-                marginBottom: '36px',
+                marginBottom: '20px',
               }}
             >
-              Whether crafting bespoke residential homes, premium villas, or complex commercial structures, our studio guarantees rigorous engineering standards at every phase of build.
+              We believe that a successful building project begins long before construction starts. It begins with understanding the client’s requirements, studying the site, planning the project properly, preparing a realistic estimate, selecting the right materials and coordinating every stage of execution.
+            </p>
+
+            <p
+              style={{
+                fontSize: '1rem',
+                color: 'var(--color-text-muted)',
+                lineHeight: 1.7,
+                marginBottom: '32px',
+              }}
+            >
+              Our role is to bring these elements together under one coordinated approach—from concept, planning and estimation to construction, finishing and final handover. For us, the first brick represents the beginning of a project, while the last brick represents our responsibility to see the project through to completion.
             </p>
 
             <Link
@@ -79,7 +106,7 @@ export default function AboutSection() {
                 transition: 'var(--transition-smooth)',
               }}
             >
-              READ FULL COMPANY PROFILE
+              READ FULL ABOUT & WHO WE ARE
               <ArrowUpRight size={18} color="#FF5A14" />
             </Link>
           </div>

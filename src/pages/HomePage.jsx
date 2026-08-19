@@ -22,10 +22,8 @@ export default function HomePage() {
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
       <div>
-        {/* Cover Hero Section */}
         <HeroSection />
 
-        {/* Studio Index Directory Grid */}
         <section className="section" style={{ backgroundColor: 'var(--color-white)', borderTop: '1px solid var(--color-border)' }}>
           <div className="container">
             <span className="section-tag">STUDIO DIRECTORY</span>

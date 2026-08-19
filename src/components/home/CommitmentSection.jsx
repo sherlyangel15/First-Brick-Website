@@ -6,32 +6,32 @@ export default function CommitmentSection() {
     {
       title: 'Transparency',
       icon: ShieldCheck,
-      desc: '[Commitment Placeholder] Complete open-book financial reporting, detailed material invoices, and no hidden cost surprises.',
+      desc: 'We believe clients should understand what they are paying for and why. Our estimates, quotations, measurements and project costs are structured to provide clarity wherever possible.',
     },
     {
       title: 'Communication',
       icon: MessageCircle,
-      desc: '[Commitment Placeholder] Direct access to site engineers, weekly project updates, and photo progression logs.',
+      desc: 'Keeping the client informed about important project decisions, material specs, site progress, and milestone schedules.',
     },
     {
       title: 'Quality',
       icon: Sparkles,
-      desc: '[Commitment Placeholder] Highest structural standards adhering to certified IS codes and premium brand materials.',
+      desc: 'Quality begins with appropriate materials, correct construction practices, proper supervision, workmanship and quality checks throughout.',
     },
     {
       title: 'Budget Awareness',
       icon: DollarSign,
-      desc: '[Commitment Placeholder] Strict Bill of Quantities (BOQ) governance ensuring cost optimization without structural compromise.',
+      desc: 'Preparing realistic pre-construction estimates and monitoring project costs to prevent unexpected variations.',
     },
     {
       title: 'Timeline Management',
       icon: Clock,
-      desc: '[Commitment Placeholder] Phase-locked milestones and aggressive schedule adherence from site prep to final handover.',
+      desc: 'Coordinating labour, material procurement, and site activities systematically according to schedule.',
     },
     {
       title: 'Accountability',
       icon: CheckSquare,
-      desc: '[Commitment Placeholder] Single point founder ownership — Aravinth Jaganathan personally oversees key project handovers.',
+      desc: 'Staying involved throughout the project until the agreed scope is completed and the property is ready for handover.',
     },
   ];
 
@@ -39,9 +39,9 @@ export default function CommitmentSection() {
     <section className="section" style={{ backgroundColor: 'var(--color-bg)' }}>
       <div className="container">
         
-        {/* Header */}
-        <div style={{ textAlign: 'center', maxWidth: '750px', margin: '0 auto 60px auto' }}>
-          <span className="section-tag">OUR GUARANTEE</span>
+        {/* Main Heading */}
+        <div style={{ textAlign: 'center', maxWidth: '850px', margin: '0 auto 60px auto' }}>
+          <span className="section-tag">CLIENT CHARTER</span>
           <h2
             style={{
               fontFamily: 'var(--font-heading)',
@@ -50,12 +50,14 @@ export default function CommitmentSection() {
               color: 'var(--color-navy)',
               letterSpacing: '-0.02em',
               marginTop: '12px',
+              lineHeight: 1.1,
             }}
           >
-            OUR SIX CLIENT <span className="text-orange">COMMITMENTS.</span>
+            WE DON’T JUST BUILD STRUCTURES. <br />
+            <span className="text-orange">WE BUILD THE PROCESS BEHIND THEM.</span>
           </h2>
-          <p style={{ fontSize: '1.05rem', color: 'var(--color-text-muted)', marginTop: '12px' }}>
-            [Commitment Subtitle Placeholder] Building trust before we build walls. Our 6-point client commitment framework.
+          <p style={{ fontSize: '1.08rem', color: 'var(--color-text-muted)', marginTop: '16px' }}>
+            Building trust before we build walls. Our 6-point client commitment framework.
           </p>
         </div>
 

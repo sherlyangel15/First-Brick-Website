@@ -1,31 +1,31 @@
 import React from 'react';
 
 export default function PhilosophySection() {
-  const cards = [
+  const pillars = [
     {
       num: '01',
-      title: 'Planning',
-      desc: '[Planning Description Placeholder] Comprehensive pre-construction estimation, structural blueprints, and material forecasting before excavation begins.',
+      title: 'PLANNING',
+      desc: 'Every successful project starts with proper planning. We study the client’s requirements, site conditions, drawings, quantities, materials, construction methodology and expected budget before execution.',
     },
     {
       num: '02',
-      title: 'Transparency',
-      desc: '[Transparency Description Placeholder] Open-book material invoicing, real-time site updates, and crystal clear client communication with zero hidden charges.',
+      title: 'TRANSPARENCY',
+      desc: 'We believe clients should understand what they are paying for and why. Our estimates, quotations, measurements and project costs are structured to provide clarity wherever possible.',
     },
     {
       num: '03',
-      title: 'Quality',
-      desc: '[Quality Description Placeholder] Uncompromising material selection, multi-stage concrete cure testing, and strict compliance with IS building codes.',
+      title: 'QUALITY',
+      desc: 'Quality is not limited to the final appearance of a building. It begins with appropriate materials, correct construction practices, proper supervision, workmanship and quality checks throughout the project.',
     },
     {
       num: '04',
-      title: 'Control',
-      desc: '[Control Description Placeholder] Direct site supervision by qualified engineers ensuring schedule adherence and rigorous budget governance.',
+      title: 'CONTROL',
+      desc: 'Construction involves continuously changing quantities, materials, labour and schedules. We focus on controlling Cost + Quantity + Quality + Time to keep the project moving systematically.',
     },
     {
       num: '05',
-      title: 'Responsibility',
-      desc: '[Responsibility Description Placeholder] From the initial foundation brick to structural handover, we assume 100% end-to-end accountability.',
+      title: 'RESPONSIBILITY',
+      desc: 'Our responsibility doesn’t end after starting the work. We believe in staying involved throughout the project until the agreed scope is completed and the property is ready for handover.',
     },
   ];
 
@@ -33,30 +33,35 @@ export default function PhilosophySection() {
     <section className="section" style={{ backgroundColor: 'var(--color-bg)' }}>
       <div className="container">
         
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginBottom: '60px' }}>
-          <span className="section-tag">OUR CORE PHILOSOPHY</span>
+        <div style={{ maxWidth: '800px', marginBottom: '60px' }}>
+          <span className="section-tag">OUR PHILOSOPHY</span>
           <h2
             style={{
               fontFamily: 'var(--font-heading)',
-              fontSize: 'clamp(2.2rem, 3.5vw, 3.5rem)',
+              fontSize: 'clamp(2.2rem, 3.8vw, 3.8rem)',
               fontWeight: 800,
               color: 'var(--color-navy)',
               letterSpacing: '-0.02em',
+              marginTop: '12px',
+              marginBottom: '20px',
             }}
           >
-            FIVE PILLARS OF <span className="text-orange">FIRST BRICK.</span>
+            PLAN BETTER. BUILD BETTER. <span className="text-orange">DELIVER BETTER.</span>
           </h2>
+          <p style={{ fontSize: '1.08rem', color: 'var(--color-text-muted)', lineHeight: 1.7 }}>
+            A construction project can become expensive and complicated when decisions are made without proper planning. At First Brick, we focus on five fundamental principles:
+          </p>
         </div>
 
         {/* 5 Numbered Cards Grid */}
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
             gap: '24px',
           }}
         >
-          {cards.map((item) => (
+          {pillars.map((item) => (
             <div
               key={item.num}
               className="editorial-card"
@@ -64,7 +69,7 @@ export default function PhilosophySection() {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                minHeight: '320px',
+                minHeight: '340px',
               }}
             >
               <div>
@@ -84,8 +89,8 @@ export default function PhilosophySection() {
 
                 <h3
                   style={{
-                    fontSize: '1.4rem',
-                    fontWeight: 700,
+                    fontSize: '1.35rem',
+                    fontWeight: 800,
                     color: 'var(--color-navy)',
                     marginBottom: '12px',
                     fontFamily: 'var(--font-heading)',
@@ -100,7 +105,7 @@ export default function PhilosophySection() {
                   style={{
                     fontSize: '0.92rem',
                     color: 'var(--color-text-muted)',
-                    lineHeight: 1.6,
+                    lineHeight: 1.65,
                   }}
                 >
                   {item.desc}
