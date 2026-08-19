@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 export const PAGE_ROUTES = [
-  { path: '/', label: 'Cover / Home', short: 'HOME' },
+  { path: '/', label: 'Cover / Home', short: 'COVER' },
   { path: '/about', label: 'About First Brick', short: 'ABOUT' },
   { path: '/founder', label: 'Founder Profile', short: 'FOUNDER' },
   { path: '/services', label: 'Our Services', short: 'SERVICES' },
@@ -14,7 +14,8 @@ export const PAGE_ROUTES = [
   { path: '/commitment', label: 'Client Commitment', short: 'COMMITMENT' },
   { path: '/credentials', label: 'Company Credentials', short: 'CREDENTIALS' },
   { path: '/terms', label: 'Terms & Conditions', short: 'TERMS' },
-  { path: '/contact', label: 'Back Cover / Contact', short: 'CONTACT' },
+  { path: '/contact', label: 'Contact Us', short: 'CONTACT' },
+  { path: '/back-cover', label: 'Back Cover', short: 'BACK COVER' },
 ];
 
 export default function PagePagination() {
@@ -48,7 +49,7 @@ export default function PagePagination() {
               color: 'var(--color-navy)',
               fontFamily: 'var(--font-heading)',
               fontWeight: 700,
-              fontSize: '0.9rem',
+              fontSize: '0.88rem',
               letterSpacing: '0.08em',
               textTransform: 'uppercase',
               transition: 'var(--transition-smooth)',
@@ -56,7 +57,7 @@ export default function PagePagination() {
           >
             <ArrowLeft size={18} color="#FF5A14" />
             <div>
-              <span style={{ display: 'block', fontSize: '0.7rem', color: 'var(--color-orange)', letterSpacing: '0.15em' }}>PREVIOUS PAGE</span>
+              <span style={{ display: 'block', fontSize: '0.68rem', color: 'var(--color-orange)', letterSpacing: '0.15em' }}>PREVIOUS PAGE</span>
               {prevPage.short}
             </div>
           </Link>
@@ -66,7 +67,7 @@ export default function PagePagination() {
 
         <div style={{ textAlign: 'center', fontFamily: 'var(--font-heading)' }}>
           <span style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)', letterSpacing: '0.2em' }}>
-            PAGE 0{currentIndex + 1} OF 12
+            PAGE {currentIndex + 1 < 10 ? `0${currentIndex + 1}` : currentIndex + 1} OF 13
           </span>
         </div>
 
@@ -81,7 +82,7 @@ export default function PagePagination() {
               color: 'var(--color-navy)',
               fontFamily: 'var(--font-heading)',
               fontWeight: 700,
-              fontSize: '0.9rem',
+              fontSize: '0.88rem',
               letterSpacing: '0.08em',
               textTransform: 'uppercase',
               textAlign: 'right',
@@ -89,7 +90,7 @@ export default function PagePagination() {
             }}
           >
             <div>
-              <span style={{ display: 'block', fontSize: '0.7rem', color: 'var(--color-orange)', letterSpacing: '0.15em' }}>NEXT PAGE</span>
+              <span style={{ display: 'block', fontSize: '0.68rem', color: 'var(--color-orange)', letterSpacing: '0.15em' }}>NEXT PAGE</span>
               {nextPage.short}
             </div>
             <ArrowRight size={18} color="#FF5A14" />
