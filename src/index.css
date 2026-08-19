@@ -1,0 +1,320 @@
+/* ==========================================================================
+   FIRST BRICK — Architectural Design System & Brand CSS
+   by Aravinth Jaganathan
+   ========================================================================== */
+
+:root {
+  /* Brand Palette */
+  --color-orange: #FF5A14;
+  --color-orange-hover: #E04805;
+  --color-navy: #0B3475;
+  --color-navy-dark: #06204B;
+  --color-navy-light: #16499B;
+  --color-white: #FFFFFF;
+  --color-bg: #F7F7F5;
+  --color-bg-alt: #EFEFEB;
+  --color-text-primary: #0F172A;
+  --color-text-muted: #5A6578;
+  --color-border: #E2E2DC;
+  --color-border-dark: rgba(255, 255, 255, 0.15);
+
+  /* Typography Families */
+  --font-display: 'Syne', 'Outfit', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Spacing System */
+  --section-padding-y: 100px;
+  --container-max-width: 1360px;
+  
+  /* Transitions */
+  --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Reset & Reset Defaults */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Typography Helpers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--color-navy);
+  letter-spacing: -0.02em;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.text-orange {
+  color: var(--color-orange);
+}
+
+.text-navy {
+  color: var(--color-navy);
+}
+
+.text-white {
+  color: var(--color-white);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+/* Watermark / Outlined Architectural Background Text */
+.outlined-text-light {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(11, 52, 117, 0.18);
+  user-select: none;
+  font-family: var(--font-heading);
+  font-weight: 800;
+}
+
+.outlined-text-dark {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.2);
+  user-select: none;
+  font-family: var(--font-heading);
+  font-weight: 800;
+}
+
+.outlined-text-orange {
+  color: transparent;
+  -webkit-text-stroke: 2px #FF5A14;
+  user-select: none;
+  font-family: var(--font-heading);
+  font-weight: 900;
+}
+
+/* Container Utility */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+/* Section Wrapper */
+.section {
+  padding: var(--section-padding-y) 0;
+  position: relative;
+}
+
+/* Orange Architectural Label / Tag */
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+/* Architectural Grid Lines Overlay (Subtle structural grid) */
+.architectural-bg-grid {
+  background-image: 
+    linear-gradient(to right, rgba(11, 52, 117, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(11, 52, 117, 0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+.architectural-bg-grid-dark {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+/* Buttons System */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 16px 36px;
+  border: 1px solid var(--color-orange);
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-orange-hover);
+  border-color: var(--color-orange-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 90, 20, 0.25);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: transparent;
+  color: var(--color-navy);
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 16px 36px;
+  border: 1.5px solid var(--color-navy);
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+.btn-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: var(--color-white);
+  color: var(--color-navy);
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 16px 36px;
+  border: 1px solid var(--color-white);
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.btn-white:hover {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  border-color: var(--color-orange);
+  transform: translateY(-2px);
+}
+
+/* Card Styling */
+.editorial-card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  padding: 40px;
+  transition: var(--transition-smooth);
+  position: relative;
+}
+
+.editorial-card:hover {
+  border-color: var(--color-orange);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(11, 52, 117, 0.08);
+}
+
+/* Dynamic Image Containers */
+.img-placeholder-wrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: #E6E6E0;
+  width: 100%;
+}
+
+.img-placeholder-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.img-placeholder-wrapper:hover img {
+  transform: scale(1.04);
+}
+
+/* 5-STAGE CINEMATIC INTRO ANIMATION STYLES */
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Text stroke progressive reveal keyframe */
+@keyframes textFillProgressive {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-navy);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-orange);
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
